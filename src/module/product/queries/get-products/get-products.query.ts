@@ -1,11 +1,11 @@
 import { IQuery } from "elysia-cqrs";
 
-interface IGetProductQuery {
+interface IGetProductsQuery {
   page?: number;
 }
 
 export class GetProductsQuery extends IQuery {
-  constructor(public props: IGetProductQuery) {
+  constructor(public props: IGetProductsQuery) {
     super();
   }
 }

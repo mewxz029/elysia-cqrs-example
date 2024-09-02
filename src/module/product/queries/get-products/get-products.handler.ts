@@ -6,6 +6,6 @@ export class GetProductsHandler
 {
   execute(query: GetProductsQuery): string {
     const { props } = query;
-    return "get product page" + props?.page;
+    return "get product page " + props?.page;
   }
 }

@@ -23,5 +23,5 @@ app
 
 app
   .handle(new Request("http://localhost:3000/v1/product"))
-  .then((x) => x.json())
+  .then((x) => x.text())
   .then(console.log);
