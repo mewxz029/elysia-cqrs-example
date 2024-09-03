@@ -1,9 +1,9 @@
-import cors from "@elysiajs/cors";
 import { Elysia } from "elysia";
 import { appRoute } from "./app.route";
+import securityPlugin from "./plugins/security";
 
 const app = new Elysia()
-  .use(cors())
+  .use(securityPlugin)
   .use(appRoute)
   .get("/", () => "Hello Elysia")
   .listen(3000);
