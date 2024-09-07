@@ -1,8 +1,10 @@
 import { Elysia } from "elysia";
 import { appRoute } from "./app.route";
-import securityPlugin from "./plugins/security";
+import securityPlugin from "./plugins/cors";
 
-const app = new Elysia()
+export const app = new Elysia();
+
+app
   .use(securityPlugin)
   .use(appRoute)
   .get("/", () => "Hello Elysia")
